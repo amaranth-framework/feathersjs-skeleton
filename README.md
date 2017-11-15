@@ -1,8 +1,6 @@
 # notes for dev (to be removed)
 
 https://medium.com/fuzz/the-electric-feathersjs-and-apollo-server-the-start-f338a744b34b
-https://jsonplaceholder.typicode.com/
-https://docs.feathersjs.com/guides/step-by-step/generators/gen-service.html#new-modules
 
 # feathersjs-skeleton
 
