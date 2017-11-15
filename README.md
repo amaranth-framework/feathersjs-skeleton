@@ -6,7 +6,7 @@ https://docs.feathersjs.com/guides/step-by-step/generators/gen-service.html#new-
 
 # feathersjs-skeleton
 
-> Skeleton for REST/GraphQL Applications
+> Skeleton for [REST](https://spring.io/understanding/REST)/GraphQL Applications
 
 ## About
 
