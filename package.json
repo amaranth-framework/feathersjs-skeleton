@@ -21,13 +21,22 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "scripts": {
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "start": "node src/",
-    "mocha": "mocha test/ --recursive --exit --timeout 4000"
+    "start": "babel-node src/",
+    "mocha": "mocha --compilers .:babel-mocha-es6-compiler test/ --recursive --exit --timeout 4000"
   },
   "dependencies": {
+    "apollo-server": "^0.3.3",
+    "apollo-server-module-graphiql": "^1.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "cors": "^2.8.4",
@@ -38,11 +47,14 @@
     "feathers-hooks-common": "^3.7.3",
     "feathers-rest": "^1.8.0",
     "feathers-socketio": "^2.0.0",
+    "graphql": "^0.11.7",
+    "graphql-tools": "^2.8.0",
     "helmet": "^3.8.2",
     "serve-favicon": "^2.4.5",
     "winston": "^2.3.1"
   },
   "devDependencies": {
+    "babel-mocha-es6-compiler": "^0.1.0",
     "eslint": "^4.9.0",
     "mocha": "^3.5.3",
     "request": "^2.83.0",

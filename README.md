@@ -15,13 +15,20 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 Getting up and running is as easy as 1, 2, 3.
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
+2. Make sure you have `babel-node` installed.
+
+    ```
+    # sudo if necesary
+    npm i -g babel-cli babel
+    ```
+
+3. Install your dependencies
 
     ```
     cd path/to/feathersjs-skeleton; npm install
     ```
 
-3. Start your app
+4. Start your app
 
     ```
     npm start
@@ -50,7 +57,7 @@ For more information on all the things you can do with Feathers visit [docs.feat
 
 ## Changelog
 
-__0.1.0__
+__0.1.1__
 
 - Initial release
 
