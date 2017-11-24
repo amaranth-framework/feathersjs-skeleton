@@ -7,10 +7,10 @@ https://medium.com/fuzz/the-electric-feathersjs-and-apollo-server-the-start-f338
 [![TravisCI Status Widget]][TravisCI Status]
 <!-- [![Coverage Status Widget]][Coverage Status] -->
 
-[TravisCI Status]: https://travis-ci.org/aurelia-framework/feathersjs-skeleton
-[TravisCI Status Widget]: https://travis-ci.org/aurelia-framework/feathersjs-skeleton.svg?branch=master
-<!-- [Coverage Status]: https://coveralls.io/r/aurelia-framework/feathersjs-skeleton -->
-<!-- [Coverage Status Widget]: https://coveralls.io/repos/github/aurelia-framework/feathersjs-skeleton/badge.svg?branch=master -->
+[TravisCI Status]: https://travis-ci.org/amaranth-framework/feathersjs-skeleton
+[TravisCI Status Widget]: https://travis-ci.org/amaranth-framework/feathersjs-skeleton.svg?branch=master
+<!-- [Coverage Status]: https://coveralls.io/r/amaranth-framework/feathersjs-skeleton -->
+<!-- [Coverage Status Widget]: https://coveralls.io/repos/github/amaranth-framework/feathersjs-skeleton/badge.svg?branch=master -->
 
 > Skeleton for [REST](https://spring.io/understanding/REST)/GraphQL Applications
 
