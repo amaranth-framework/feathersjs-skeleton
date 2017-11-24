@@ -25,8 +25,8 @@ module.exports = function() {
   const app = this;
 
   app.use('/graphql', apolloExpress((req) => {
-    const queryString = req.body.query.replace(/\n/gi, '').replace(/\s+/gi, ' ');
-    logger.info('graphql: ', queryString, JSON.stringify(req.body.variables));
+    const queryString = ((req.body || {}).query || '').replace(/\n/gi, '').replace(/\s+/gi, ' ');
+    logger.info('graphql: ', queryString, JSON.stringify((req.body || {}).variables));
     return {
       schema: makeExecutableSchema({
         typeDefs: Schema,

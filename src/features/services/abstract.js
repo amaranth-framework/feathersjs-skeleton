@@ -24,11 +24,12 @@ class Service {
   constructor (options) {
     this.options = options || {};
     this.requestOptions = {
-      method: 'GET',
       baseUrl: this.options.baseUrl,
-      uri: `/${this.options.name}`,
       headers: {},
-      json: true
+      json: true,
+      method: 'GET',
+      // resolveWithFullResponse: true,
+      uri: `/${this.options.name}`
     };
   }
   /**

@@ -39,11 +39,13 @@ const typeDefinitions = `
 
   type RootQuery {
     findUsers(name: String, email: String, phone: String, website: String): [User]
-    getUser(id: String!): User
+    getUser(id: Int!): User
   }
 
   type RootMutation {
-    removeUser(id: String!): User
+    createUser(name: String, email: String, phone: String, website: String): User
+    updateUser(id: Int!, name: String, email: String, phone: String, website: String): User
+    removeUser(id: Int!): Boolean
   }
 
   schema {

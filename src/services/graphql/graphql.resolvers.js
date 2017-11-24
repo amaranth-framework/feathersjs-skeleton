@@ -16,13 +16,16 @@ export default function Resolvers() {
       }
     },
     RootMutation: {
-      // createUser(root, args, context) {
-      //   return users.createUser(args, context);
-      // },
+      createUser(root, args, context) {
+        return users.create(args, context);
+      },
+      updateUser(root, args, context) {
+        let id = args.id
+        delete args.id
+        return users.update(id, args, context);
+      },
       removeUser(root, { id }, context) {
-        let user = users.get(id, context);
-        user.remove(id);
-        return user;
+        return users.remove(id);
       }
     }
   };
