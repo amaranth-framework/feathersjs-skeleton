@@ -20,12 +20,12 @@ export default function Resolvers() {
         return users.create(args, context);
       },
       updateUser(root, args, context) {
-        let id = args.id
-        delete args.id
+        let id = args.id;
+        delete args.id;
         return users.update(id, args, context);
       },
       removeUser(root, { id }, context) {
-        return users.remove(id);
+        return users.remove(id, context);
       }
     }
   };
