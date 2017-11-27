@@ -66,22 +66,68 @@
 
 ```graphql
 mutation {
-  createUser(name: "John Doe", email: "john.doe@email.foo", phone: "+9012345678", website: "john.jp") {
+  createUser(user: {
+      name: "John Doe", 
+      email: "john.doe@email.foo", 
+      phone: "+9012345678", 
+      website: "john.jp",
+      address: {
+        street: "The Street from Philadelphia"
+      }
+  }) {
     id
     name
-    email
+    email,
+    address {
+      street
+      suite
+      city
+      zipcode
+    }
   }
 }
-
 ```
+
 ## Updating a user
 
 ```graphql
 mutation {
-  updateUser(id: 1, name: "John Doe", email: "john.doe@email.foo", phone: "+9012345678", website: "john.jp") {
+  updateUser(id: 1, user: {
+      name: "John Doe", 
+      email: "john.doe@email.foo", 
+      phone: "+9012345678", 
+      website: "john.jp",
+      address: {
+        street: "The Street from Philadelphia"
+      }
+  }) {
     id
     name
-    email
+    email,
+    address {
+      street
+      suite
+      city
+      zipcode
+    }
+  }
+}
+```
+
+## Patching a user
+
+```graphql
+mutation {
+  patchUser(id: 1, name: "John Doe", email: "john.doe@email.foo", phone: "+9012345678", website: "john.jp", address: { street: "The Street from Philadelphia" }) {
+    id
+    name
+    email,
+    address {
+      street
+      suite
+      city
+      zipcode
+    }
   }
 }
 ```
@@ -90,6 +136,6 @@ mutation {
 
 ```graphql
 mutation {
-  removeUser(id: 1) { }
+  removeUser(id: 1)
 }
 ```

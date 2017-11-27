@@ -6,6 +6,11 @@ const typeDefinitions = `
     long: Float
   }
 
+  input GeoInput {
+    lat: Float
+    long: Float
+  }
+
   type Address {
     street: String
     suite: String
@@ -14,7 +19,21 @@ const typeDefinitions = `
     geo: Geo
   }
 
+  input AddressInput {
+    street: String
+    suite: String
+    city: String
+    zipcode: String
+    geo: GeoInput
+  }
+
   type Company {
+    name: String
+    catchPhrase: String
+    bs: String
+  }
+
+  input CompanyInput {
     name: String
     catchPhrase: String
     bs: String
@@ -30,6 +49,15 @@ const typeDefinitions = `
     company: Company
   }
 
+  input UserInput {
+    name: String
+    email: String
+    address: AddressInput
+    phone: String
+    website: String
+    company: CompanyInput
+  }
+
   type Post {
     id: Int
     userId: Int
@@ -43,8 +71,9 @@ const typeDefinitions = `
   }
 
   type RootMutation {
-    createUser(name: String, email: String, phone: String, website: String): User
-    updateUser(id: Int!, name: String, email: String, phone: String, website: String): User
+    createUser(user: UserInput): User
+    updateUser(id: Int!, user: UserInput): User
+    patchUser(id: Int!, name: String, email: String, phone: String, website: String, address: AddressInput, company: CompanyInput): User
     removeUser(id: Int!): Boolean
   }
 

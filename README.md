@@ -16,14 +16,16 @@ https://medium.com/fuzz/the-electric-feathersjs-and-apollo-server-the-start-f338
 
 ## About
 
-This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
+This project uses 
+* [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
+* [GraphQL](http://graphql.org). A query language for APIs and a runtime for fulfilling those queries with your existing data.
 
 ## Getting Started
 
 Getting up and running is as easy as 1, 2, 3.
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Make sure you have `babel-node` installed.
+2. Make sure you have [babel-node/babel-cli](https://www.npmjs.com/package/babel-cli) installed.
 
     ```
     # sudo if necesary
@@ -33,7 +35,7 @@ Getting up and running is as easy as 1, 2, 3.
 3. Install your dependencies
 
     ```
-    cd path/to/feathersjs-skeleton; npm install
+    cd /path/to/feathersjs-skeleton; npm install
     ```
 
 4. Start your app
@@ -59,15 +61,22 @@ $ feathers generate model                 # Generate a new Model
 $ feathers help                           # Show all commands
 ```
 
+GraphQL can be defined under the `/grapqhl` service defined under Feathers, by filling in 
+* `src/services/graphql/graphql.resolvers.js`
+* `src/services/graphql/graphql.schema.js`
+* `src/services/graphql/graphql.service.js`
+
 ## Help
 
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+For more information on all the things you can do with Feathers visit 
+* [docs.feathersjs.com](http://docs.feathersjs.com)
+* [graphql.org/learn](http://graphql.org/learn).
 
 ## Changelog
 
-__0.1.1__
+__0.1.2__
 
-- Initial release
+- Completed GraphQL Demo
 
 ## License
 
